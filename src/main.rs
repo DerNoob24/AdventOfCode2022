@@ -1,5 +1,7 @@
-mod day01;
+mod days {
+    pub mod day01;
+}
 
 fn main() {
-    day01::day01();
+    days::day01::tasks();
 }
