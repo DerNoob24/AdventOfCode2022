@@ -1,7 +1,7 @@
 fn task1(input: &[[char; 2]; 2500]) {
     let mut score = 0;
-    for i in 0..2500 {
-        match input[i] {
+    for i in input {
+        match i {
             ['A', 'X'] => score += 1 + 3,
             ['A', 'Y'] => score += 2 + 6,
             ['A', 'Z'] => score += 3 + 0,
@@ -19,8 +19,8 @@ fn task1(input: &[[char; 2]; 2500]) {
 
 fn task2(input: &[[char; 2]; 2500]) {
     let mut score = 0;
-    for i in 0..2500 {
-        match input[i] {
+    for i in input {
+        match i {
             ['A', 'X'] => score += 3 + 0, // Rock lose
             ['A', 'Y'] => score += 1 + 3, // Rock draw
             ['A', 'Z'] => score += 2 + 6, // Rock win

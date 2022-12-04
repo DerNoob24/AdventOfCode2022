@@ -62,8 +62,8 @@ fn sum(input: Vec<char>) {
 
 fn task1(input: &[&str; 300]) {
     let mut common: Vec<char> = Vec::new();
-    for i in 0..300 {
-        let (first, second) = input[i].split_at(input[i].len() / 2);
+    for i in input {
+        let (first, second) = i.split_at(i.len() / 2);
         for char in first.chars() {
             if second.contains(char) {
                 common.push(char);

@@ -1,9 +1,9 @@
 fn task1(input: &[Vec<i32>; 254]) {
     let mut most = 0;
-    for i in 0..254 {
+    for i in input {
         let mut calc = 0;
-        for j in 0..input[i].len() {
-            calc += input[i][j];
+        for j in 0..i.len() {
+            calc += i[j];
         }
         if calc > most {
             most = calc;
@@ -16,10 +16,10 @@ fn task2(input: &[Vec<i32>; 254]) {
     let mut most = 0;
     let mut second = 0;
     let mut third = 0;
-    for i in 0..254 {
+    for i in input {
         let mut calc = 0;
-        for j in 0..input[i].len() {
-            calc += input[i][j];
+        for j in 0..i.len() {
+            calc += i[j];
         }
         if calc > most {
             third = second;
